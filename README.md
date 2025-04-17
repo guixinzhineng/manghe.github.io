@@ -1,0 +1,682 @@
+# 码多多ChatWork知识库系统PHP源码版
+
+## API Docs
+- 后台接口 > AI问答 > 对话记录 [AI对话记录列表](https://hbiclihthh.apifox.cn/api-96022460.md): 
+- 后台接口 > AI问答 > 对话记录 [删除对话记录](https://hbiclihthh.apifox.cn/api-96022715.md): 
+- 后台接口 > AI问答 > 问题示例 [问题示例列表](https://hbiclihthh.apifox.cn/api-96024076.md): 
+- 后台接口 > AI问答 > 问题示例 [新增问题示例](https://hbiclihthh.apifox.cn/api-96024658.md): 
+- 后台接口 > AI问答 > 问题示例 [编辑问题示例](https://hbiclihthh.apifox.cn/api-96025352.md): 
+- 后台接口 > AI问答 > 问题示例 [删除问题示例](https://hbiclihthh.apifox.cn/api-96025861.md): 
+- 后台接口 > AI问答 > 问题示例 [更新问题示例状态](https://hbiclihthh.apifox.cn/api-96026084.md): 
+- 后台接口 > AI问答 > 示例分类 [示例分类列表](https://hbiclihthh.apifox.cn/api-96026555.md): 
+- 后台接口 > AI问答 > 示例分类 [新增示例分类](https://hbiclihthh.apifox.cn/api-96026958.md): 
+- 后台接口 > AI问答 > 示例分类 [编辑示例分类](https://hbiclihthh.apifox.cn/api-96029101.md): 
+- 后台接口 > AI问答 > 示例分类 [删除示例分类](https://hbiclihthh.apifox.cn/api-96029249.md): 
+- 后台接口 > AI问答 > 示例分类 [更新示例分类状态](https://hbiclihthh.apifox.cn/api-96029463.md): 
+- 后台接口 > 问答拆分 [拆分列表](https://hbiclihthh.apifox.cn/api-110149733.md): 
+- 后台接口 > 问答拆分 [导入文件](https://hbiclihthh.apifox.cn/api-110140199.md): 
+- 后台接口 > 问答拆分 [导入删除](https://hbiclihthh.apifox.cn/api-110235687.md): 
+- 后台接口 > 问答拆分 [导出数据](https://hbiclihthh.apifox.cn/api-110237176.md): 
+- 后台接口 > 问答拆分 [拆分数据列表](https://hbiclihthh.apifox.cn/api-110238337.md): 
+- 后台接口 > 问答拆分 [拆分数据修正](https://hbiclihthh.apifox.cn/api-110238728.md): 
+- 后台接口 > 问答拆分 [删除拆分数据](https://hbiclihthh.apifox.cn/api-110240626.md): 
+- 后台接口 > 知识库管理 [知识库列表](https://hbiclihthh.apifox.cn/api-95971880.md): 
+- 后台接口 > 知识库管理 [知识库所有](https://hbiclihthh.apifox.cn/api-96788233.md): 
+- 后台接口 > 知识库管理 [知识库详情](https://hbiclihthh.apifox.cn/api-95971889.md): 
+- 后台接口 > 知识库管理 [知识库新增](https://hbiclihthh.apifox.cn/api-95971949.md): 
+- 后台接口 > 知识库管理 [知识库编辑](https://hbiclihthh.apifox.cn/api-95971953.md): 
+- 后台接口 > 知识库管理 [知识库删除](https://hbiclihthh.apifox.cn/api-95972002.md): 
+- 后台接口 > 知识库管理 [库状态修改](https://hbiclihthh.apifox.cn/api-97102995.md): 
+- 后台接口 > 知识库数据 [数据录入](https://hbiclihthh.apifox.cn/api-95971208.md): 2023-08-15 废除了 chunkSize字段, 前端不需要再传递这个字段了,后台默认
+- 后台接口 > 知识库数据 [训练数据列表](https://hbiclihthh.apifox.cn/api-95971825.md): 
+- 后台接口 > 知识库数据 [训练数据重试](https://hbiclihthh.apifox.cn/api-95971867.md): 一键重试所有失败的任务
+- 后台接口 > 知识库数据 [训练数据删除](https://hbiclihthh.apifox.cn/api-95971873.md): 
+- 后台接口 > 知识库数据 [训练数据修正](https://hbiclihthh.apifox.cn/api-103130652.md): 
+- 后台接口 > 知识库数据 [训练数据测试](https://hbiclihthh.apifox.cn/api-97396711.md): 该接口目前还无法 调试
+- 后台接口 > 知识库数据 [训练任务检测](https://hbiclihthh.apifox.cn/api-104052888.md): 可以做一个心跳请求 约 2 ~ 3 秒左右发起一个请求。
+- 后台接口 > 知识库数据 [解析网页](https://hbiclihthh.apifox.cn/api-110476858.md): 
+- 后台接口 > 知识库记录 [问答记录列表](https://hbiclihthh.apifox.cn/api-96548184.md): 
+- 后台接口 > 知识库记录 [问答记录删除](https://hbiclihthh.apifox.cn/api-96552682.md): 
+- 后台接口 > 知识库记录 [问答记录修正](https://hbiclihthh.apifox.cn/api-103438898.md): 
+- 后台接口 > 机器人管理 >  应用配置 (已废弃) [应用配置详情](https://hbiclihthh.apifox.cn/api-95972171.md): 
+- 后台接口 > 机器人管理 >  应用配置 (已废弃) [应用配置保存](https://hbiclihthh.apifox.cn/api-95972435.md): 
+- 后台接口 > 机器人管理 > 应用管理 [应用找知识库](https://hbiclihthh.apifox.cn/api-103395166.md): 
+- 后台接口 > 机器人管理 > 应用管理 [所有应用](https://hbiclihthh.apifox.cn/api-96786195.md): 
+- 后台接口 > 机器人管理 > 应用管理 [应用列表](https://hbiclihthh.apifox.cn/api-96009027.md): 
+- 后台接口 > 机器人管理 > 应用管理 [应用详情](https://hbiclihthh.apifox.cn/api-96009266.md): 
+- 后台接口 > 机器人管理 > 应用管理 [应用新增](https://hbiclihthh.apifox.cn/api-96009395.md): 
+- 后台接口 > 机器人管理 > 应用管理 [应用编辑](https://hbiclihthh.apifox.cn/api-96010078.md): 
+- 后台接口 > 机器人管理 > 应用管理 [应用删除](https://hbiclihthh.apifox.cn/api-96010216.md): 
+- 后台接口 > 机器人管理 > 应用管理 [状态修改](https://hbiclihthh.apifox.cn/api-97101626.md): 
+- 后台接口 > 机器人管理 > 发布管理 [发布列表](https://hbiclihthh.apifox.cn/api-96685313.md): 
+- 后台接口 > 机器人管理 > 发布管理 [发布网页分享](https://hbiclihthh.apifox.cn/api-97113604.md): 
+- 后台接口 > 机器人管理 > 发布管理 [发布API分享](https://hbiclihthh.apifox.cn/api-97114855.md): 
+- 后台接口 > 机器人管理 > 发布管理 [用量设置](https://hbiclihthh.apifox.cn/api-97115375.md): 
+- 后台接口 > 机器人管理 > 发布管理 [分享删除](https://hbiclihthh.apifox.cn/api-97115395.md): 
+- 后台接口 > 机器人管理 > 发布管理 [重置密钥](https://hbiclihthh.apifox.cn/api-97244772.md): 
+- 后台接口 > 机器人管理 > 分类管理 [分类列表](https://hbiclihthh.apifox.cn/api-106389892.md): 
+- 后台接口 > 机器人管理 > 分类管理 [分类新增](https://hbiclihthh.apifox.cn/api-106383910.md): 
+- 后台接口 > 机器人管理 > 分类管理 [分类编辑](https://hbiclihthh.apifox.cn/api-106391657.md): 
+- 后台接口 > 机器人管理 > 分类管理 [分类删除](https://hbiclihthh.apifox.cn/api-106392450.md): 
+- 后台接口 > 机器人管理 > 分类管理 [分类状态](https://hbiclihthh.apifox.cn/api-107248176.md): 
+- 后台接口 > 充值套餐 [订单列表](https://hbiclihthh.apifox.cn/api-115045565.md): 
+- 后台接口 > 充值套餐 [订单详情](https://hbiclihthh.apifox.cn/api-115082834.md): 
+- 后台接口 > 充值套餐 [套餐列表](https://hbiclihthh.apifox.cn/api-114820435.md): 
+- 后台接口 > 充值套餐 [套餐详情](https://hbiclihthh.apifox.cn/api-116163776.md): 
+- 后台接口 > 充值套餐 [套餐新增](https://hbiclihthh.apifox.cn/api-114823449.md): 
+- 后台接口 > 充值套餐 [套餐编辑](https://hbiclihthh.apifox.cn/api-114827283.md): 
+- 后台接口 > 充值套餐 [套餐删除](https://hbiclihthh.apifox.cn/api-114827984.md): 
+- 后台接口 > 充值套餐 [套餐状态](https://hbiclihthh.apifox.cn/api-114841407.md): 
+- 后台接口 > 充值套餐 [套餐排序](https://hbiclihthh.apifox.cn/api-123130180.md): 
+- 后台接口 > 充值套餐 [充值配置参数](https://hbiclihthh.apifox.cn/api-115382973.md): 
+- 后台接口 > 充值套餐 [充值配置保存](https://hbiclihthh.apifox.cn/api-115383729.md): 
+- 后台接口 > 充值套餐 [充值订单退款](https://hbiclihthh.apifox.cn/api-115801997.md): 
+- 后台接口 > 用户管理 [用户列表](https://hbiclihthh.apifox.cn/api-96230977.md): 
+- 后台接口 > 用户管理 [用户详情](https://hbiclihthh.apifox.cn/api-96336910.md): 
+- 后台接口 > 用户管理 [入黑名单](https://hbiclihthh.apifox.cn/api-96340693.md): 
+- 后台接口 > 用户管理 [创建用户](https://hbiclihthh.apifox.cn/api-96335536.md): 
+- 后台接口 > 用户管理 [设置分组](https://hbiclihthh.apifox.cn/api-107434561.md): 
+- 后台接口 > 用户管理 [重置密码](https://hbiclihthh.apifox.cn/api-96342934.md): 
+- 后台接口 > 用户管理 [调整用户机器人次数](https://hbiclihthh.apifox.cn/api-107573142.md): 
+- 后台接口 > 用户管理 [调整用户知识库次数](https://hbiclihthh.apifox.cn/api-115565252.md): 
+- 后台接口 > 用户管理 [调整用户合成时长数](https://hbiclihthh.apifox.cn/api-123199128.md): 
+- 后台接口 > 用户管理 [设置注册奖励](https://hbiclihthh.apifox.cn/api-103559975.md): 
+- 后台接口 > 用户管理 [获取注册奖励](https://hbiclihthh.apifox.cn/api-103559382.md): 
+- 后台接口 > 用户管理 [余额明细](https://hbiclihthh.apifox.cn/api-115423485.md): 
+- 后台接口 > 用户管理 [调整用户视频合成时长](https://hbiclihthh.apifox.cn/api-122598237.md): 
+- 后台接口 > 用户分组 [所有分组](https://hbiclihthh.apifox.cn/api-107545659.md): 
+- 后台接口 > 用户分组 [分组列表](https://hbiclihthh.apifox.cn/api-107430266.md): 
+- 后台接口 > 用户分组 [分组新增](https://hbiclihthh.apifox.cn/api-107430293.md): 
+- 后台接口 > 用户分组 [分组编辑](https://hbiclihthh.apifox.cn/api-107430889.md): 
+- 后台接口 > 用户分组 [分组删除](https://hbiclihthh.apifox.cn/api-107431002.md): 
+- 后台接口 > 系统设置 > AI模型 [AI配置列表](https://hbiclihthh.apifox.cn/api-112606766.md): 
+- 后台接口 > 系统设置 > AI模型 [AI配置保存](https://hbiclihthh.apifox.cn/api-112607245.md): 
+- 后台接口 > 系统设置 > 网站设置 [获取网站信息](https://hbiclihthh.apifox.cn/api-96039056.md): 
+- 后台接口 > 系统设置 > 网站设置 [设置网站信息](https://hbiclihthh.apifox.cn/api-96039893.md): 
+- 后台接口 > 系统设置 > 登录注册 [获取登录注册配置](https://hbiclihthh.apifox.cn/api-96050180.md): 
+- 后台接口 > 系统设置 > 登录注册 [设置登录注册配置](https://hbiclihthh.apifox.cn/api-96051075.md): 
+- 后台接口 > 系统设置 > 公告设置 [获取公告配置](https://hbiclihthh.apifox.cn/api-96058483.md): 
+- 后台接口 > 系统设置 > 公告设置 [设置公告配置](https://hbiclihthh.apifox.cn/api-96059629.md): 
+- 后台接口 > 系统设置 > 对话设置 [获取对话配置](https://hbiclihthh.apifox.cn/api-96073816.md): 
+- 后台接口 > 系统设置 > 对话设置 [设置对话配置](https://hbiclihthh.apifox.cn/api-96075806.md): 
+- 后台接口 > 系统设置 > 敏感词库 [敏感词列表](https://hbiclihthh.apifox.cn/api-96081873.md): 
+- 后台接口 > 系统设置 > 敏感词库 [新增敏感词](https://hbiclihthh.apifox.cn/api-96082023.md): 
+- 后台接口 > 系统设置 > 敏感词库 [编辑敏感词](https://hbiclihthh.apifox.cn/api-96083348.md): 
+- 后台接口 > 系统设置 > 敏感词库 [删除敏感词](https://hbiclihthh.apifox.cn/api-96083461.md): 
+- 后台接口 > 系统设置 > 敏感词库 [获取配置接口](https://hbiclihthh.apifox.cn/api-96086181.md): 
+- 后台接口 > 系统设置 > 敏感词库 [设置配置接口](https://hbiclihthh.apifox.cn/api-96086790.md): 
+- 后台接口 > 系统设置 > 内容审核 [获取内容审核配置](https://hbiclihthh.apifox.cn/api-96112912.md): 
+- 后台接口 > 系统设置 > 内容审核 [设置内容审核配置](https://hbiclihthh.apifox.cn/api-96113134.md): 
+- 后台接口 > 系统设置 > 客服设置 [获取客服设置](https://hbiclihthh.apifox.cn/api-97994089.md): 
+- 后台接口 > 系统设置 > 客服设置 [设置客服设置](https://hbiclihthh.apifox.cn/api-97999418.md): 
+- 后台接口 > 系统设置 > 密钥管理 [密钥列表](https://hbiclihthh.apifox.cn/api-99481792.md): 
+- 后台接口 > 系统设置 > 密钥管理 [密钥详情](https://hbiclihthh.apifox.cn/api-104460107.md): 
+- 后台接口 > 系统设置 > 密钥管理 [模型列表](https://hbiclihthh.apifox.cn/api-99487988.md): 
+- 后台接口 > 系统设置 > 密钥管理 [密钥新增](https://hbiclihthh.apifox.cn/api-99488207.md): 
+- 后台接口 > 系统设置 > 密钥管理 [密钥编辑](https://hbiclihthh.apifox.cn/api-99488577.md): 
+- 后台接口 > 系统设置 > 密钥管理 [密钥删除](https://hbiclihthh.apifox.cn/api-99491478.md): 
+- 后台接口 > 系统设置 > 密钥管理 [状态修改](https://hbiclihthh.apifox.cn/api-99491555.md): 
+- 后台接口 > 系统设置 > 密钥管理 [获取配置](https://hbiclihthh.apifox.cn/api-104453209.md): 是否开启 失效的key 自动下架
+- 后台接口 > 系统设置 > 密钥管理 [设置配置](https://hbiclihthh.apifox.cn/api-103924981.md): 是否开启 失效的key 自动下架
+- 后台接口 > 系统设置 > key下架规则 [列表](https://hbiclihthh.apifox.cn/api-115680182.md): 
+- 后台接口 > 系统设置 > key下架规则 [详情](https://hbiclihthh.apifox.cn/api-115680250.md): 
+- 后台接口 > 系统设置 > key下架规则 [添加](https://hbiclihthh.apifox.cn/api-115680298.md): 
+- 后台接口 > 系统设置 > key下架规则 [编辑](https://hbiclihthh.apifox.cn/api-115680346.md): 
+- 后台接口 > 系统设置 > key下架规则 [删除](https://hbiclihthh.apifox.cn/api-115680480.md): 
+- 后台接口 > 系统设置 > key下架规则 [修改状态](https://hbiclihthh.apifox.cn/api-115680537.md): 
+- 后台接口 > 系统设置 > 数字人 [获取数字人人配置](https://hbiclihthh.apifox.cn/api-120748491.md): 
+- 后台接口 > 系统设置 > 数字人 [设置数字人配置](https://hbiclihthh.apifox.cn/api-120748520.md): 
+- 后台接口 > 渠道设置 > PC端设置 [获取pc端设置](https://hbiclihthh.apifox.cn/api-96346645.md): 
+- 后台接口 > 渠道设置 > PC端设置 [设置pc端设置](https://hbiclihthh.apifox.cn/api-96347627.md): 
+- 后台接口 > 消息通知 > 邮箱设置 [获取邮箱配置](https://hbiclihthh.apifox.cn/api-96967760.md): 
+- 后台接口 > 消息通知 > 邮箱设置 [设置邮箱配置](https://hbiclihthh.apifox.cn/api-96972423.md): 
+- 后台接口 > 支付配置 [支付配置列表](https://hbiclihthh.apifox.cn/api-114927949.md): 
+- 后台接口 > 支付配置 [支付配置详情](https://hbiclihthh.apifox.cn/api-114936083.md): 
+- 后台接口 > 支付配置 [支付方式列表](https://hbiclihthh.apifox.cn/api-114940030.md): 
+- 后台接口 > 页面装修 [导航装修保存](https://hbiclihthh.apifox.cn/api-122893966.md): 
+- 后台接口 > 页面装修 [导航装修详情](https://hbiclihthh.apifox.cn/api-122898335.md): 
+- 后台接口 > 数字人 > 音乐管理 [音乐分类列表](https://hbiclihthh.apifox.cn/api-123666979.md): 
+- 后台接口 > 数字人 > 音乐管理 [添加音乐分类](https://hbiclihthh.apifox.cn/api-123667026.md): 
+- 后台接口 > 数字人 > 音乐管理 [修改音乐分类状态](https://hbiclihthh.apifox.cn/api-123669285.md): 
+- 后台接口 > 数字人 > 音乐管理 [删除音乐分类](https://hbiclihthh.apifox.cn/api-123669501.md): 
+- 后台接口 > 数字人 > 音乐管理 [音乐列表](https://hbiclihthh.apifox.cn/api-123670391.md): 
+- 后台接口 > 数字人 > 音乐管理 [添加音乐](https://hbiclihthh.apifox.cn/api-123671481.md): 
+- 后台接口 > 数字人 > 音乐管理 [修改音乐状态](https://hbiclihthh.apifox.cn/api-123674010.md): 
+- 后台接口 > 数字人 > 音乐管理 [删除音乐](https://hbiclihthh.apifox.cn/api-123674070.md): 
+- 后台接口 > 数字人 > 音乐管理 [获取音乐分类列表](https://hbiclihthh.apifox.cn/api-123682426.md): 
+- 后台接口 > 数字人 > 音乐管理 [批量修改音乐分类](https://hbiclihthh.apifox.cn/api-123993516.md): 
+- 后台接口 > 数字人 > 音乐管理 [批量删除音乐](https://hbiclihthh.apifox.cn/api-123995345.md): 
+- 后台接口 > 数字人 > 音乐管理 [编辑音乐](https://hbiclihthh.apifox.cn/api-131213648.md): 
+- 后台接口 > 数字人 > 音乐管理 [获取音乐](https://hbiclihthh.apifox.cn/api-131214772.md): 
+- 后台接口 > 数字人 > 背景图管理 [背景图分类列表](https://hbiclihthh.apifox.cn/api-123674315.md): 
+- 后台接口 > 数字人 > 背景图管理 [背景图列表](https://hbiclihthh.apifox.cn/api-123674316.md): 
+- 后台接口 > 数字人 > 背景图管理 [添加背景图分类](https://hbiclihthh.apifox.cn/api-123674318.md): 
+- 后台接口 > 数字人 > 背景图管理 [添加背景图](https://hbiclihthh.apifox.cn/api-123674319.md): 
+- 后台接口 > 数字人 > 背景图管理 [修改背景图分类状态](https://hbiclihthh.apifox.cn/api-123674320.md): 
+- 后台接口 > 数字人 > 背景图管理 [修改背景图状态](https://hbiclihthh.apifox.cn/api-123674321.md): 
+- 后台接口 > 数字人 > 背景图管理 [删除背景图分类](https://hbiclihthh.apifox.cn/api-123674322.md): 
+- 后台接口 > 数字人 > 背景图管理 [删除背景图](https://hbiclihthh.apifox.cn/api-123674323.md): 
+- 后台接口 > 数字人 > 背景图管理 [获取背景图分类列表](https://hbiclihthh.apifox.cn/api-123683115.md): 
+- 后台接口 > 数字人 > 背景图管理 [批量修改背景图](https://hbiclihthh.apifox.cn/api-123996145.md): 
+- 后台接口 > 数字人 > 背景图管理 [批量删除背景图](https://hbiclihthh.apifox.cn/api-123996659.md): 
+- 后台接口 > 数字人 > 背景图管理 [编辑背景图](https://hbiclihthh.apifox.cn/api-131217146.md): 
+- 后台接口 > 数字人 > 背景图管理 [获取背景图](https://hbiclihthh.apifox.cn/api-131217175.md): 
+- 后台接口 > 数字人 > 贴纸管理 [贴纸分类列表](https://hbiclihthh.apifox.cn/api-123677719.md): 
+- 后台接口 > 数字人 > 贴纸管理 [贴纸列表](https://hbiclihthh.apifox.cn/api-123677720.md): 
+- 后台接口 > 数字人 > 贴纸管理 [添加贴纸分类](https://hbiclihthh.apifox.cn/api-123677721.md): 
+- 后台接口 > 数字人 > 贴纸管理 [添加贴纸](https://hbiclihthh.apifox.cn/api-123677722.md): 
+- 后台接口 > 数字人 > 贴纸管理 [修改贴纸分类状态](https://hbiclihthh.apifox.cn/api-123677723.md): 
+- 后台接口 > 数字人 > 贴纸管理 [修改贴纸状态](https://hbiclihthh.apifox.cn/api-123677724.md): 
+- 后台接口 > 数字人 > 贴纸管理 [删除贴纸分类](https://hbiclihthh.apifox.cn/api-123677725.md): 
+- 后台接口 > 数字人 > 贴纸管理 [删除贴纸](https://hbiclihthh.apifox.cn/api-123677726.md): 
+- 后台接口 > 数字人 > 贴纸管理 [获取贴纸分类列表](https://hbiclihthh.apifox.cn/api-123683141.md): 
+- 后台接口 > 数字人 > 贴纸管理 [批量修改贴纸](https://hbiclihthh.apifox.cn/api-124020020.md): 
+- 后台接口 > 数字人 > 贴纸管理 [批量删除贴纸](https://hbiclihthh.apifox.cn/api-124020722.md): 
+- 后台接口 > 数字人 > 贴纸管理 [编辑贴纸分类](https://hbiclihthh.apifox.cn/api-124763591.md): 
+- 后台接口 > 数字人 > 贴纸管理 [编辑贴纸](https://hbiclihthh.apifox.cn/api-131217477.md): 
+- 后台接口 > 数字人 > 贴纸管理 [获取贴纸](https://hbiclihthh.apifox.cn/api-131217749.md): 
+- 后台接口 > 数字人 > 前景图 [前景图列表](https://hbiclihthh.apifox.cn/api-123679617.md): 
+- 后台接口 > 数字人 > 前景图 [添加前景图](https://hbiclihthh.apifox.cn/api-123679240.md): 
+- 后台接口 > 数字人 > 前景图 [删除前景图](https://hbiclihthh.apifox.cn/api-123679417.md): 
+- 后台接口 > 数字人 > 前景图 [修改前景图状态](https://hbiclihthh.apifox.cn/api-123681738.md): 
+- 后台接口 > 数字人 > 前景图 [删除前景图](https://hbiclihthh.apifox.cn/api-124020774.md): 
+- 后台接口 > 数字人 > 前景图 [编辑前景图](https://hbiclihthh.apifox.cn/api-131217847.md): 
+- 后台接口 > 数字人 > 前景图 [获取前景图](https://hbiclihthh.apifox.cn/api-131218009.md): 
+- 后台接口 > 数字人 > 数字人 > 合成记录 [合成记录列表](https://hbiclihthh.apifox.cn/api-125967964.md): 
+- 后台接口 > 数字人 > 数字人 > 合成记录 [删除合成记录](https://hbiclihthh.apifox.cn/api-125980934.md): 
+- 后台接口 [工作台](https://hbiclihthh.apifox.cn/api-97110930.md): 
+- 后台接口 [财务统计](https://hbiclihthh.apifox.cn/api-118421824.md): 
+- 后台接口 [文件上传](https://hbiclihthh.apifox.cn/api-110104340.md): 
+- 前台接口 > AI对话 [AI对话示例](https://hbiclihthh.apifox.cn/api-96904409.md): 
+- 前台接口 > AI对话 [AI对话接口](https://hbiclihthh.apifox.cn/api-106719511.md): 
+- 前台接口 > AI对话 [语音播报](https://hbiclihthh.apifox.cn/api-116096967.md): 
+- 前台接口 > AI行业 [分类列表](https://hbiclihthh.apifox.cn/api-110381264.md): 
+- 前台接口 > AI行业 [创作列表](https://hbiclihthh.apifox.cn/api-110381493.md): 
+- 前台接口 > AI行业 [创作收藏、取消收藏](https://hbiclihthh.apifox.cn/api-110383077.md): 
+- 前台接口 > 问答拆分 [拆分列表](https://hbiclihthh.apifox.cn/api-110437503.md): 
+- 前台接口 > 问答拆分 [导入文件](https://hbiclihthh.apifox.cn/api-110437500.md): 
+- 前台接口 > 问答拆分 [导入删除](https://hbiclihthh.apifox.cn/api-110437501.md): 
+- 前台接口 > 问答拆分 [导出数据](https://hbiclihthh.apifox.cn/api-110437502.md): 
+- 前台接口 > 问答拆分 [拆分数据列表](https://hbiclihthh.apifox.cn/api-110437507.md): 
+- 前台接口 > 问答拆分 [拆分数据修正](https://hbiclihthh.apifox.cn/api-110437511.md): 
+- 前台接口 > 问答拆分 [删除拆分数据](https://hbiclihthh.apifox.cn/api-110437512.md): 
+- 前台接口 > 上传接口 [文件上传](https://hbiclihthh.apifox.cn/api-110729177.md): 
+- 前台接口 > 登录注册 [登录](https://hbiclihthh.apifox.cn/api-96395451.md): 
+- 前台接口 > 登录注册 [发送邮箱验证码](https://hbiclihthh.apifox.cn/api-96668902.md): 
+- 前台接口 > 登录注册 [注册](https://hbiclihthh.apifox.cn/api-96732486.md): 
+- 前台接口 > 登录注册 [重置密码](https://hbiclihthh.apifox.cn/api-98009235.md): 
+- 前台接口 > 其它配置 [获取客服配置](https://hbiclihthh.apifox.cn/api-98013268.md): 
+- 前台接口 > 其它配置 [全局系统配置](https://hbiclihthh.apifox.cn/api-123042996.md): 
+- 前台接口 > 应用分享 [分享详情](https://hbiclihthh.apifox.cn/api-97073086.md): 
+- 前台接口 > 应用分享 [分享提问](https://hbiclihthh.apifox.cn/api-97074610.md): 聊天对话
+- 前台接口 > 应用分享 [分享授权](https://hbiclihthh.apifox.cn/api-97078977.md): 如果访问 (分享详情 /  分享提问) 提示 无权限问题。
+- 前台接口 > 应用分享 [分享对话的记录](https://hbiclihthh.apifox.cn/api-97844317.md): 
+- 前台接口 > 应用分享 [分享对话的清空](https://hbiclihthh.apifox.cn/api-97848058.md): 
+- 前台接口 > 充值套餐 [购买记录](https://hbiclihthh.apifox.cn/api-115132069.md): 
+- 前台接口 > 充值套餐 [支付方式](https://hbiclihthh.apifox.cn/api-114947417.md): 
+- 前台接口 > 充值套餐 [支付状态](https://hbiclihthh.apifox.cn/api-114947763.md): 
+- 前台接口 > 充值套餐 [套餐列表](https://hbiclihthh.apifox.cn/api-114875333.md): 
+- 前台接口 > 充值套餐 [充值下单](https://hbiclihthh.apifox.cn/api-114890064.md): 
+- 前台接口 > 充值套餐 [发起支付](https://hbiclihthh.apifox.cn/api-114921380.md): 
+- 前台接口 > 充值套餐 [回调测试](https://hbiclihthh.apifox.cn/api-115592889.md): 
+- 前台接口 > 用户管理 [个人中心](https://hbiclihthh.apifox.cn/api-115145288.md): 
+- 前台接口 > 用户管理 [个人信息](https://hbiclihthh.apifox.cn/api-115147013.md): 
+- 前台接口 > 机器人管理 [应用分类](https://hbiclihthh.apifox.cn/api-106422140.md): 
+- 前台接口 > 机器人管理 [应用列表](https://hbiclihthh.apifox.cn/api-97090234.md): 
+- 前台接口 > 机器人管理 [应用详情](https://hbiclihthh.apifox.cn/api-100346549.md): 
+- 前台接口 > 机器人管理 [应用创建](https://hbiclihthh.apifox.cn/api-106136418.md): 
+- 前台接口 > 机器人管理 [应用编辑](https://hbiclihthh.apifox.cn/api-106220856.md): 
+- 前台接口 > 机器人管理 [应用删除](https://hbiclihthh.apifox.cn/api-106141031.md): 
+- 前台接口 > 机器人管理 [应用收藏](https://hbiclihthh.apifox.cn/api-110029225.md): 
+- 前台接口 > 机器人管理 [对话记录](https://hbiclihthh.apifox.cn/api-106210259.md): 
+- 前台接口 > 机器人管理 [对话修正](https://hbiclihthh.apifox.cn/api-107321563.md): 
+- 前台接口 > 机器人管理 [对话删除](https://hbiclihthh.apifox.cn/api-107353973.md): 
+- 前台接口 > 机器人管理 [对话删除 Copy](https://hbiclihthh.apifox.cn/api-112615821.md): 
+- 前台接口 > 机器人发布 [发布列表](https://hbiclihthh.apifox.cn/api-107295894.md): 
+- 前台接口 > 机器人发布 [发布网页分享](https://hbiclihthh.apifox.cn/api-107295895.md): 
+- 前台接口 > 机器人发布 [发布API分享](https://hbiclihthh.apifox.cn/api-107295896.md): 
+- 前台接口 > 机器人发布 [用量设置](https://hbiclihthh.apifox.cn/api-107295897.md): 
+- 前台接口 > 机器人发布 [重置密钥](https://hbiclihthh.apifox.cn/api-107295898.md): 
+- 前台接口 > 机器人发布 [分享删除](https://hbiclihthh.apifox.cn/api-107295899.md): 
+- 前台接口 > 知识库提问 > 会话分类 [分类列表](https://hbiclihthh.apifox.cn/api-97080014.md): 
+- 前台接口 > 知识库提问 > 会话分类 [分类新增](https://hbiclihthh.apifox.cn/api-97081493.md): 
+- 前台接口 > 知识库提问 > 会话分类 [分类编辑](https://hbiclihthh.apifox.cn/api-97085572.md): 
+- 前台接口 > 知识库提问 > 会话分类 [分类删除](https://hbiclihthh.apifox.cn/api-97088965.md): 
+- 前台接口 > 知识库提问 > 会话分类 [清空会话](https://hbiclihthh.apifox.cn/api-97089136.md): 
+- 前台接口 > 知识库提问 [知识库对话记录](https://hbiclihthh.apifox.cn/api-97637584.md): 
+- 前台接口 > 知识库提问 [知识库应用对话](https://hbiclihthh.apifox.cn/api-97090716.md): 接口未完成 .....
+- 前台接口 > 知识库提问 [问答记录清空](https://hbiclihthh.apifox.cn/api-97770821.md): 
+- 前台接口 > 知识库提问 [讯飞测试](https://hbiclihthh.apifox.cn/api-112298112.md): 
+- 前台接口 > 知识库数据 [数据录入](https://hbiclihthh.apifox.cn/api-106598425.md): 2023-08-15 废除了 chunkSize字段, 前端不需要再传递这个字段了,后台默认
+- 前台接口 > 知识库数据 [训练数据列表](https://hbiclihthh.apifox.cn/api-106598427.md): 
+- 前台接口 > 知识库数据 [训练数据重试](https://hbiclihthh.apifox.cn/api-106598428.md): 一键重试所有失败的任务
+- 前台接口 > 知识库数据 [训练数据删除](https://hbiclihthh.apifox.cn/api-106598429.md): 
+- 前台接口 > 知识库数据 [训练数据修正](https://hbiclihthh.apifox.cn/api-106598430.md): 
+- 前台接口 > 知识库数据 [训练数据测试](https://hbiclihthh.apifox.cn/api-107141978.md): 该接口目前还无法 调试
+- 前台接口 > 知识库管理 [我的所有知识库](https://hbiclihthh.apifox.cn/api-110916959.md): 
+- 前台接口 > 知识库管理 [知识库列表](https://hbiclihthh.apifox.cn/api-106560456.md): 
+- 前台接口 > 知识库管理 [知识库详情](https://hbiclihthh.apifox.cn/api-106565428.md): 
+- 前台接口 > 知识库管理 [知识库新增](https://hbiclihthh.apifox.cn/api-106565587.md): 
+- 前台接口 > 知识库管理 [知识库编辑](https://hbiclihthh.apifox.cn/api-106567033.md): 
+- 前台接口 > 知识库管理 [知识库删除](https://hbiclihthh.apifox.cn/api-106568601.md): 
+- 前台接口 > 数字人 > 合成记录 [合成记录列表](https://hbiclihthh.apifox.cn/api-125998819.md): 
+- 前台接口 > 数字人 > 合成记录 [删除合成记录](https://hbiclihthh.apifox.cn/api-126194045.md): 
+- 前台接口 > 数字人 > 合成记录 [重命名](https://hbiclihthh.apifox.cn/api-126227759.md): 
+- 前台接口 > 数字人 [获取形象人列表](https://hbiclihthh.apifox.cn/api-121039806.md): 
+- 前台接口 > 数字人 [获取背景图分类](https://hbiclihthh.apifox.cn/api-124522899.md): 
+- 前台接口 > 数字人 [获取背景图列表](https://hbiclihthh.apifox.cn/api-124518554.md): 
+- 前台接口 > 数字人 [获取音乐分类](https://hbiclihthh.apifox.cn/api-124523787.md): 
+- 前台接口 > 数字人 [获取音乐分类列表](https://hbiclihthh.apifox.cn/api-124523824.md): 
+- 前台接口 > 数字人 [获取前景图列表](https://hbiclihthh.apifox.cn/api-124519126.md): 
+- 前台接口 > 数字人 [获取贴纸列表](https://hbiclihthh.apifox.cn/api-124524308.md): 
+- 前台接口 > 数字人 [获取音频列表](https://hbiclihthh.apifox.cn/api-125068304.md): 
+- 前台接口 > 数字人 [获取文字特效列表](https://hbiclihthh.apifox.cn/api-125202106.md): 
+- 前台接口 > 数字人 [获取字体列表](https://hbiclihthh.apifox.cn/api-125235327.md): 
+- 前台接口 > 数字人 [视频合成保存接口](https://hbiclihthh.apifox.cn/api-126573945.md): 
+- 前台接口 > 数字人 [获取视频详情](https://hbiclihthh.apifox.cn/api-126592931.md): 
+- 【新】后台接口 > AI设置 > AI模型 [AI模型配置详情](https://hbiclihthh.apifox.cn/api-135791582.md): 
+- 【新】后台接口 > AI设置 > AI模型 [AI模型配置保存](https://hbiclihthh.apifox.cn/api-135792086.md): 
+- 【新】后台接口 > AI设置 > AI对话 [AI对话配置详情](https://hbiclihthh.apifox.cn/api-137088055.md): 
+- 【新】后台接口 > AI设置 > AI对话 [AI模型配置保存](https://hbiclihthh.apifox.cn/api-137090245.md): 
+- 【新】后台接口 > AI设置 > 敏感词库 [敏感词列表](https://hbiclihthh.apifox.cn/api-137106382.md): 
+- 【新】后台接口 > AI设置 > 敏感词库 [敏感词详情](https://hbiclihthh.apifox.cn/api-137106455.md): 
+- 【新】后台接口 > AI设置 > 敏感词库 [敏感词新增](https://hbiclihthh.apifox.cn/api-137107100.md): 
+- 【新】后台接口 > AI设置 > 敏感词库 [敏感词编辑](https://hbiclihthh.apifox.cn/api-137108277.md): 
+- 【新】后台接口 > AI设置 > 敏感词库 [敏感词删除](https://hbiclihthh.apifox.cn/api-137108857.md): 
+- 【新】后台接口 > AI设置 > 敏感词库 [敏感词状态](https://hbiclihthh.apifox.cn/api-137108936.md): 
+- 【新】后台接口 > AI设置 > 敏感词库 [配置详情](https://hbiclihthh.apifox.cn/api-137108981.md): 
+- 【新】后台接口 > AI设置 > 敏感词库 [配置保存](https://hbiclihthh.apifox.cn/api-137109032.md): 
+- 【新】后台接口 > AI设置 > 内容审核 [审核配置详情](https://hbiclihthh.apifox.cn/api-137118264.md): 
+- 【新】后台接口 > AI设置 > 内容审核 [审核配置保存](https://hbiclihthh.apifox.cn/api-137118361.md): 
+- 【新】后台接口 > AI设置 > 语音配置 [语音配置详情 ](https://hbiclihthh.apifox.cn/api-137120741.md): 
+- 【新】后台接口 > AI设置 > 语音配置 [语音配置保存](https://hbiclihthh.apifox.cn/api-137120795.md): 
+- 【新】后台接口 > AI设置 > 密钥池管理 [模型列表](https://hbiclihthh.apifox.cn/api-141221659.md): 
+- 【新】后台接口 > AI设置 > 密钥池管理 [密钥列表](https://hbiclihthh.apifox.cn/api-141223548.md): 
+- 【新】后台接口 > AI设置 > 密钥池管理 [密钥详情](https://hbiclihthh.apifox.cn/api-141226429.md): 
+- 【新】后台接口 > AI设置 > 密钥池管理 [密钥新增](https://hbiclihthh.apifox.cn/api-141226580.md): 1、对话模型和向量模型比较特殊,你需要根据channel的类型来判断显示那个密钥输入框。
+- 【新】后台接口 > AI设置 > 密钥池管理 [密钥编辑](https://hbiclihthh.apifox.cn/api-141229352.md): 
+- 【新】后台接口 > AI设置 > 密钥池管理 [密钥删除](https://hbiclihthh.apifox.cn/api-141232740.md): 
+- 【新】后台接口 > AI设置 > 密钥池管理 [密钥状态](https://hbiclihthh.apifox.cn/api-141233560.md): 
+- 【新】后台接口 > AI知识库 > 机器人 [机器人列表](https://hbiclihthh.apifox.cn/api-139720715.md): 
+- 【新】后台接口 > AI知识库 > 机器人 [机器人详情](https://hbiclihthh.apifox.cn/api-139742979.md): 
+- 【新】后台接口 > AI知识库 > 机器人 [机器人删除](https://hbiclihthh.apifox.cn/api-139753014.md): 
+- 【新】后台接口 > AI知识库 > 机器人 [机器人状态调整](https://hbiclihthh.apifox.cn/api-140730492.md): 
+- 【新】后台接口 > AI知识库 > 机器人 [修改广场的状态](https://hbiclihthh.apifox.cn/api-159681119.md): 
+- 【新】后台接口 > AI知识库 > 机器人 [机器人问答记录](https://hbiclihthh.apifox.cn/api-140018265.md): 
+- 【新】后台接口 > AI知识库 > 机器人 [机器人问答记录删除](https://hbiclihthh.apifox.cn/api-141082508.md): 
+- 【新】后台接口 > AI知识库 > 知识库 [知识库列表](https://hbiclihthh.apifox.cn/api-139765812.md): 
+- 【新】后台接口 > AI知识库 > 知识库 [知识库详情](https://hbiclihthh.apifox.cn/api-139773130.md): 
+- 【新】后台接口 > AI知识库 > 知识库 [知识库删除](https://hbiclihthh.apifox.cn/api-139780800.md): 
+- 【新】后台接口 > AI知识库 > 知识库 [知识库状态](https://hbiclihthh.apifox.cn/api-140942450.md): 
+- 【新】后台接口 > AI知识库 > 知识库 [知识库转移](https://hbiclihthh.apifox.cn/api-168433169.md): 
+- 【新】后台接口 > AI知识库 > 知识库 [文件列表](https://hbiclihthh.apifox.cn/api-139877041.md): 
+- 【新】后台接口 > AI知识库 > 知识库 [文件删除](https://hbiclihthh.apifox.cn/api-139878339.md): 
+- 【新】后台接口 > AI知识库 > 知识库 [文件数据](https://hbiclihthh.apifox.cn/api-139883415.md): 
+- 【新】后台接口 > AI知识库 > 知识库 [数据管理](https://hbiclihthh.apifox.cn/api-144086408.md): 
+- 【新】后台接口 > AI知识库 > 知识库 [数据删除](https://hbiclihthh.apifox.cn/api-144523812.md): 
+- 【新】后台接口 > AI知识库 > 数字人 [数字人列表](https://hbiclihthh.apifox.cn/api-159179087.md): 
+- 【新】后台接口 > AI知识库 > 数字人 [数字人详情](https://hbiclihthh.apifox.cn/api-159188713.md): 
+- 【新】后台接口 > AI知识库 > 数字人 [数字人删除](https://hbiclihthh.apifox.cn/api-159200532.md): 
+- 【新】后台接口 > AI知识库 > 数字人 [数字人状态](https://hbiclihthh.apifox.cn/api-159202259.md): 
+- 【新】后台接口 > AI知识库 > 机器人广场 [机器人广场列表](https://hbiclihthh.apifox.cn/api-171639808.md): 
+- 【新】后台接口 > AI知识库 > 机器人广场 [机器人广场编辑](https://hbiclihthh.apifox.cn/api-171659312.md): 
+- 【新】后台接口 > AI知识库 > 机器人广场 [机器人广场删除](https://hbiclihthh.apifox.cn/api-171660797.md): 
+- 【新】后台接口 > AI知识库 > 机器人广场 [机器人广场状态](https://hbiclihthh.apifox.cn/api-171678858.md): 
+- 【新】后台接口 > AI知识库 > 机器人广场 [机器人广场排序](https://hbiclihthh.apifox.cn/api-171679642.md): 
+- 【新】后台接口 > AI知识库 > 机器人广场 [机器人广场审核](https://hbiclihthh.apifox.cn/api-197711458.md): 
+- 【新】后台接口 > AI知识库 > 机器人广场 [机器人广场配置](https://hbiclihthh.apifox.cn/api-198168453.md): 
+- 【新】后台接口 > AI知识库 > 机器人广场 [设置机器人广场配置](https://hbiclihthh.apifox.cn/api-198171072.md): 
+- 【新】后台接口 > AI知识库 > 机器人分类 [机器人分类列表](https://hbiclihthh.apifox.cn/api-159657741.md): 
+- 【新】后台接口 > AI知识库 > 机器人分类 [机器人分类详情](https://hbiclihthh.apifox.cn/api-159652574.md): 
+- 【新】后台接口 > AI知识库 > 机器人分类 [机器人分类新增](https://hbiclihthh.apifox.cn/api-159658582.md): 
+- 【新】后台接口 > AI知识库 > 机器人分类 [机器人分类编辑](https://hbiclihthh.apifox.cn/api-159661789.md): 
+- 【新】后台接口 > AI知识库 > 机器人分类 [机器人分类删除](https://hbiclihthh.apifox.cn/api-159663231.md): 
+- 【新】后台接口 > AI知识库 > 机器人分类 [机器人分类状态](https://hbiclihthh.apifox.cn/api-159670288.md): 
+- 【新】后台接口 > AI知识库 > 机器人分类 [机器人所有分类](https://hbiclihthh.apifox.cn/api-172087279.md): 
+- 【新】后台接口 > 模型计费(旧) [可选模型](https://hbiclihthh.apifox.cn/api-135804408.md): 
+- 【新】后台接口 > 模型计费(旧) [计费模型](https://hbiclihthh.apifox.cn/api-135886120.md): 
+- 【新】后台接口 > 模型计费(旧) [配置保存](https://hbiclihthh.apifox.cn/api-135890742.md): 
+- 【新】后台接口 > 模型计费(旧) [删除检测](https://hbiclihthh.apifox.cn/api-144871845.md): 
+- 【新】后台接口 > 模型管理 [模型通道](https://hbiclihthh.apifox.cn/api-176576440.md): 
+- 【新】后台接口 > 模型管理 [模型列表](https://hbiclihthh.apifox.cn/api-176696631.md): 
+- 【新】后台接口 > 模型管理 [模型详情](https://hbiclihthh.apifox.cn/api-177158272.md): 
+- 【新】后台接口 > 模型管理 [模型创建](https://hbiclihthh.apifox.cn/api-176603158.md): 
+- 【新】后台接口 > 模型管理 [模型编辑](https://hbiclihthh.apifox.cn/api-177138975.md): 
+- 【新】后台接口 > 模型管理 [模型删除](https://hbiclihthh.apifox.cn/api-178158002.md): 
+- 【新】后台接口 > 模型管理 [模型排序 ](https://hbiclihthh.apifox.cn/api-178157110.md): 
+- 【新】后台接口 > 对话管理 > 示例分类 [示例分类列表](https://hbiclihthh.apifox.cn/api-136876342.md): 
+- 【新】后台接口 > 对话管理 > 示例分类 [示例分类详情](https://hbiclihthh.apifox.cn/api-136881788.md): 
+- 【新】后台接口 > 对话管理 > 示例分类 [示例分类新增](https://hbiclihthh.apifox.cn/api-136882015.md): 
+- 【新】后台接口 > 对话管理 > 示例分类 [示例分类编辑](https://hbiclihthh.apifox.cn/api-136883269.md): 
+- 【新】后台接口 > 对话管理 > 示例分类 [示例分类删除](https://hbiclihthh.apifox.cn/api-136883698.md): 
+- 【新】后台接口 > 对话管理 > 示例分类 [示例分类状态](https://hbiclihthh.apifox.cn/api-136885501.md): 
+- 【新】后台接口 > 对话管理 > 问题示例 [对话示例列表](https://hbiclihthh.apifox.cn/api-136885664.md): 
+- 【新】后台接口 > 对话管理 > 问题示例 [对话示例详情](https://hbiclihthh.apifox.cn/api-136887987.md): 
+- 【新】后台接口 > 对话管理 > 问题示例 [对话示例新增](https://hbiclihthh.apifox.cn/api-136886434.md): 
+- 【新】后台接口 > 对话管理 > 问题示例 [对话示例编辑](https://hbiclihthh.apifox.cn/api-136888259.md): 
+- 【新】后台接口 > 对话管理 > 问题示例 [对话示例删除](https://hbiclihthh.apifox.cn/api-136889531.md): 
+- 【新】后台接口 > 对话管理 > 问题示例 [对话示例状态](https://hbiclihthh.apifox.cn/api-136889728.md): 
+- 【新】后台接口 > 对话管理 > 对话记录 [对话记录列表](https://hbiclihthh.apifox.cn/api-136889943.md): 
+- 【新】后台接口 > 对话管理 > 对话记录 [对话记录删除](https://hbiclihthh.apifox.cn/api-136896899.md): 
+- 【新】后台接口 > 创作管理 > 创作分类 [创作分类列表](https://hbiclihthh.apifox.cn/api-136993973.md): 
+- 【新】后台接口 > 创作管理 > 创作分类 [创作分类详情](https://hbiclihthh.apifox.cn/api-136998725.md): 
+- 【新】后台接口 > 创作管理 > 创作分类 [创作分类新增](https://hbiclihthh.apifox.cn/api-136999402.md): 
+- 【新】后台接口 > 创作管理 > 创作分类 [创作分类编辑](https://hbiclihthh.apifox.cn/api-136999813.md): 
+- 【新】后台接口 > 创作管理 > 创作分类 [创作分类删除](https://hbiclihthh.apifox.cn/api-137001804.md): 
+- 【新】后台接口 > 创作管理 > 创作分类 [创作分类状态](https://hbiclihthh.apifox.cn/api-137003952.md): 
+- 【新】后台接口 > 创作管理 > 创作模型 [创作模型列表](https://hbiclihthh.apifox.cn/api-137007774.md): 
+- 【新】后台接口 > 创作管理 > 创作模型 [创作模型详情](https://hbiclihthh.apifox.cn/api-137010689.md): 
+- 【新】后台接口 > 创作管理 > 创作模型 [创作模型新增](https://hbiclihthh.apifox.cn/api-137011007.md): 
+- 【新】后台接口 > 创作管理 > 创作模型 [创作模型编辑](https://hbiclihthh.apifox.cn/api-137015916.md): 
+- 【新】后台接口 > 创作管理 > 创作模型 [创作模型删除](https://hbiclihthh.apifox.cn/api-137017030.md): 
+- 【新】后台接口 > 创作管理 > 创作模型 [创作模型状态](https://hbiclihthh.apifox.cn/api-137017196.md): 
+- 【新】后台接口 > 创作管理 > 创作模型 [创作模型批量删除](https://hbiclihthh.apifox.cn/api-194708356.md): 
+- 【新】后台接口 > 充值套餐 > 套餐管理 [套餐列表](https://hbiclihthh.apifox.cn/api-138290752.md): 
+- 【新】后台接口 > 充值套餐 > 套餐管理 [套餐详情](https://hbiclihthh.apifox.cn/api-138290753.md): 
+- 【新】后台接口 > 充值套餐 > 套餐管理 [套餐新增](https://hbiclihthh.apifox.cn/api-138290759.md): 
+- 【新】后台接口 > 充值套餐 > 套餐管理 [套餐编辑](https://hbiclihthh.apifox.cn/api-138290760.md): 
+- 【新】后台接口 > 充值套餐 > 套餐管理 [套餐删除](https://hbiclihthh.apifox.cn/api-138290761.md): 
+- 【新】后台接口 > 充值套餐 > 套餐管理 [套餐状态](https://hbiclihthh.apifox.cn/api-138290762.md): 
+- 【新】后台接口 > 充值套餐 > 套餐管理 [套餐排序](https://hbiclihthh.apifox.cn/api-138290763.md): 
+- 【新】后台接口 > 充值套餐 > 套餐配置 [充值配置参数](https://hbiclihthh.apifox.cn/api-138290755.md): 
+- 【新】后台接口 > 充值套餐 > 套餐配置 [充值配置保存](https://hbiclihthh.apifox.cn/api-138290756.md): 
+- 【新】后台接口 > 充值套餐 > 订单管理 [订单列表](https://hbiclihthh.apifox.cn/api-138290754.md): 
+- 【新】后台接口 > 充值套餐 > 订单管理 [订单详情](https://hbiclihthh.apifox.cn/api-138290758.md): 
+- 【新】后台接口 > 充值套餐 > 订单管理 [充值订单退款](https://hbiclihthh.apifox.cn/api-138290757.md): 
+- 【新】后台接口 > 注册奖励 [奖励配置详情](https://hbiclihthh.apifox.cn/api-138305535.md): 
+- 【新】后台接口 > 注册奖励 [奖励配置保存](https://hbiclihthh.apifox.cn/api-138306240.md): 
+- 【新】后台接口 > 用户管理 [用户列表](https://hbiclihthh.apifox.cn/api-139788008.md): 
+- 【新】后台接口 > 用户管理 [用户详情](https://hbiclihthh.apifox.cn/api-138359083.md): 
+- 【新】后台接口 > 用户管理 [编辑信息](https://hbiclihthh.apifox.cn/api-148672032.md): 
+- 【新】后台接口 > 用户管理 [调整账户](https://hbiclihthh.apifox.cn/api-138356145.md): 
+- 【新】后台接口 > 用户管理 [调整空间](https://hbiclihthh.apifox.cn/api-196698707.md): 
+- 【新】后台接口 > 用户管理 [创建用户](https://hbiclihthh.apifox.cn/api-138371358.md): 
+- 【新】后台接口 > 用户管理 [入黑名单](https://hbiclihthh.apifox.cn/api-138371387.md): 
+- 【新】后台接口 > 用户管理 [设置分组](https://hbiclihthh.apifox.cn/api-138371405.md): 
+- 【新】后台接口 > 用户管理 [重置密码 ](https://hbiclihthh.apifox.cn/api-138371409.md): 
+- 【新】后台接口 > 用户管理 [用户会员购买记录](https://hbiclihthh.apifox.cn/api-189372291.md): 
+- 【新】后台接口 > 用户分组 [分组列表](https://hbiclihthh.apifox.cn/api-138369240.md): 
+- 【新】后台接口 > 用户分组 [分组新增](https://hbiclihthh.apifox.cn/api-138369242.md): 
+- 【新】后台接口 > 用户分组 [分组编辑](https://hbiclihthh.apifox.cn/api-138369243.md): 
+- 【新】后台接口 > 用户分组 [分组删除](https://hbiclihthh.apifox.cn/api-138369244.md): 
+- 【新】后台接口 > 财务中心 [余额明细](https://hbiclihthh.apifox.cn/api-141085825.md): 
+- 【新】后台接口 > 财务中心 [财务中心](https://hbiclihthh.apifox.cn/api-140285944.md): 
+- 【新】后台接口 > 财务中心 [退款统计](https://hbiclihthh.apifox.cn/api-140296040.md): 
+- 【新】后台接口 > 财务中心 [退款记录](https://hbiclihthh.apifox.cn/api-140296122.md): 
+- 【新】后台接口 > 财务中心 [退款日志](https://hbiclihthh.apifox.cn/api-140296168.md): 
+- 【新】后台接口 > 其它接口 [控制台](https://hbiclihthh.apifox.cn/api-140299491.md): 
+- 【新】后台接口 > 系统设置 > 公告配置 [公告配置详情](https://hbiclihthh.apifox.cn/api-140725700.md): 
+- 【新】后台接口 > 系统设置 > 公告配置 [公告配置保存](https://hbiclihthh.apifox.cn/api-140725787.md): 
+- 【新】后台接口 > 系统设置 > 网站配置 [获取网站信息](https://hbiclihthh.apifox.cn/api-140867495.md): 
+- 【新】后台接口 > 系统设置 > 网站配置 [设置网站信息](https://hbiclihthh.apifox.cn/api-140868254.md): 
+- 【新】后台接口 > 系统设置 > 网站配置 [获取备案信息](https://hbiclihthh.apifox.cn/api-140868271.md): 
+- 【新】后台接口 > 系统设置 > 网站配置 [备案信息设置](https://hbiclihthh.apifox.cn/api-141001579.md): 
+- 【新】后台接口 > 系统设置 > 网站配置 [政策协议信息](https://hbiclihthh.apifox.cn/api-141001753.md): 
+- 【新】后台接口 > 系统设置 > 网站配置 [政策协议设置](https://hbiclihthh.apifox.cn/api-141002090.md): 
+- 【新】后台接口 > 系统设置 > 客服设置 [客服详情](https://hbiclihthh.apifox.cn/api-141003087.md): 
+- 【新】后台接口 > 系统设置 > 客服设置 [客服保存](https://hbiclihthh.apifox.cn/api-141003262.md): 
+- 【新】后台接口 > 系统设置 > 邮件配置 [邮箱配置详情](https://hbiclihthh.apifox.cn/api-141026296.md): 
+- 【新】后台接口 > 系统设置 > 邮件配置 [邮件配置保存](https://hbiclihthh.apifox.cn/api-141026297.md): 
+- 【新】后台接口 > 系统设置 > 在线更新 [邮件配置保存 Copy](https://hbiclihthh.apifox.cn/api-145016274.md): 
+- 【新】后台接口 > 系统设置 > 思维导图 [获取思维导图配置](https://hbiclihthh.apifox.cn/api-184621228.md): 
+- 【新】后台接口 > 系统设置 > 思维导图 [设置思维导图配置](https://hbiclihthh.apifox.cn/api-184621267.md): 
+- 【新】后台接口 > AI音乐 > 生成记录 [音乐列表](https://hbiclihthh.apifox.cn/api-179417931.md): 
+- 【新】后台接口 > AI音乐 > 生成记录 [音乐删除](https://hbiclihthh.apifox.cn/api-179451991.md): 
+- 【新】后台接口 > AI音乐 > 生成记录 [下拉选项](https://hbiclihthh.apifox.cn/api-179494170.md): 
+- 【新】后台接口 > AI音乐 > 曲风管理 [风格新增](https://hbiclihthh.apifox.cn/api-178150699.md): 
+- 【新】后台接口 > AI音乐 > 曲风管理 [风格编辑](https://hbiclihthh.apifox.cn/api-178150815.md): 
+- 【新】后台接口 > AI音乐 > 曲风管理 [风格列表](https://hbiclihthh.apifox.cn/api-178157477.md): 
+- 【新】后台接口 > AI音乐 > 曲风管理 [风格详情](https://hbiclihthh.apifox.cn/api-178158179.md): 
+- 【新】后台接口 > AI音乐 > 曲风管理 [风格状态](https://hbiclihthh.apifox.cn/api-178160572.md): 
+- 【新】后台接口 > AI音乐 > 曲风管理 [风格删除](https://hbiclihthh.apifox.cn/api-178163223.md): 
+- 【新】后台接口 > AI音乐 > AI配置 [AI配置详情](https://hbiclihthh.apifox.cn/api-178422209.md): 
+- 【新】后台接口 > AI音乐 > AI配置 [AI配置保存](https://hbiclihthh.apifox.cn/api-178425049.md): 
+- 【新】后台接口 > AI搜索 > 应用配置 [基础配置详情](https://hbiclihthh.apifox.cn/api-200413215.md): 
+- 【新】后台接口 > AI搜索 > 应用配置 [基础配置保存](https://hbiclihthh.apifox.cn/api-200414037.md): 
+- 【新】后台接口 > AI搜索 > 示例配置 [示例配置详情](https://hbiclihthh.apifox.cn/api-200415675.md): 
+- 【新】后台接口 > AI搜索 > 示例配置 [示例配置保存](https://hbiclihthh.apifox.cn/api-200415676.md): 
+- 【新】后台接口 > AI搜索 > 搜索记录 [搜索记录列表](https://hbiclihthh.apifox.cn/api-200371414.md): 
+- 【新】后台接口 > AI搜索 > 搜索记录 [搜索记录详情](https://hbiclihthh.apifox.cn/api-200393228.md): 
+- 【新】后台接口 > AI搜索 > 搜索记录 [搜索记录删除](https://hbiclihthh.apifox.cn/api-204817771.md): 
+- 【新】后台接口 > AIPPT > 应用配置 [基础配置详情](https://hbiclihthh.apifox.cn/api-219491447.md): 
+- 【新】后台接口 > AIPPT > 应用配置 [基础配置保存](https://hbiclihthh.apifox.cn/api-219491448.md): 
+- 【新】后台接口 > AIPPT > 示例配置 [示例配置详情](https://hbiclihthh.apifox.cn/api-219491449.md): 
+- 【新】后台接口 > AIPPT > 示例配置 [示例配置保存](https://hbiclihthh.apifox.cn/api-219491450.md): 
+- 【新】后台接口 > AIPPT > 生成记录 [记录列表](https://hbiclihthh.apifox.cn/api-221301097.md): 
+- 【新】后台接口 > 会员套餐 [新增会员套餐](https://hbiclihthh.apifox.cn/api-178203555.md): 
+- 【新】后台接口 > 会员套餐 [编辑会员套餐](https://hbiclihthh.apifox.cn/api-178203608.md): 
+- 【新】后台接口 > 会员套餐 [获取套餐模型](https://hbiclihthh.apifox.cn/api-178203883.md): 
+- 【新】后台接口 > 会员套餐 [修改套餐状态](https://hbiclihthh.apifox.cn/api-178206193.md): 
+- 【新】后台接口 > 会员套餐 [获取套餐推荐](https://hbiclihthh.apifox.cn/api-178206714.md): 
+- 【新】后台接口 > 会员套餐 [获取套餐排序](https://hbiclihthh.apifox.cn/api-178210267.md): 
+- 【新】后台接口 > 会员套餐 [删除套餐](https://hbiclihthh.apifox.cn/api-178208418.md): 
+- 【新】后台接口 > 会员套餐 [会员套餐列表](https://hbiclihthh.apifox.cn/api-178259972.md): 
+- 【新】后台接口 > 会员套餐 [获取会员套餐配置](https://hbiclihthh.apifox.cn/api-183967961.md): 
+- 【新】后台接口 > 会员套餐 [设置会员套餐配置](https://hbiclihthh.apifox.cn/api-183968001.md): 
+- 【新】后台接口 > 思维导图 [获取思维导图配置](https://hbiclihthh.apifox.cn/api-184217011.md): 
+- 【新】后台接口 > 思维导图 [设置思维导图配置](https://hbiclihthh.apifox.cn/api-184217024.md): 
+- 【新】后台接口 > 思维导图 [获取思维导图示例配置](https://hbiclihthh.apifox.cn/api-185061160.md): 
+- 【新】后台接口 > 思维导图 [设置思维导图示例配置](https://hbiclihthh.apifox.cn/api-185061164.md): 
+- 【新】后台接口 > AI视频 > 应用配置 [获取配置](https://hbiclihthh.apifox.cn/api-188756995.md): 
+- 【新】后台接口 > AI视频 > 应用配置 [保存配置](https://hbiclihthh.apifox.cn/api-188759111.md): 
+- 【新】后台接口 > AI视频 > 视频风格 [风格列表](https://hbiclihthh.apifox.cn/api-188864872.md): 
+- 【新】后台接口 > AI视频 > 视频风格 [风格编辑](https://hbiclihthh.apifox.cn/api-188869477.md): 
+- 【新】后台接口 > AI视频 > 视频风格 [风格新增](https://hbiclihthh.apifox.cn/api-188867241.md): 
+- 【新】后台接口 > AI视频 > 视频风格 [风格详情](https://hbiclihthh.apifox.cn/api-188870773.md): 
+- 【新】后台接口 > AI视频 > 视频风格 [风格状态](https://hbiclihthh.apifox.cn/api-188871223.md): 
+- 【新】后台接口 > AI视频 > 视频风格 [风格删除](https://hbiclihthh.apifox.cn/api-188871336.md): 
+- 【新】后台接口 > AI视频 > 生成记录 [视频列表](https://hbiclihthh.apifox.cn/api-188878186.md): 
+- 【新】后台接口 > AI视频 > 生成记录 [视频删除](https://hbiclihthh.apifox.cn/api-188878198.md): 
+- 【新】后台接口 > AI视频 > 生成记录 [下拉选项 ](https://hbiclihthh.apifox.cn/api-188878211.md): 
+- 【新】后台接口 > 分享设置 [获取分享配置](https://hbiclihthh.apifox.cn/api-194469749.md): 
+- 【新】后台接口 > 分享设置 [设置分享配置](https://hbiclihthh.apifox.cn/api-194469780.md): 
+- 【新】后台接口 > 分享设置 [获取邀请配置](https://hbiclihthh.apifox.cn/api-194470355.md): 
+- 【新】后台接口 > 分享设置 [设置邀请配置](https://hbiclihthh.apifox.cn/api-194470713.md): 
+- 【新】后台接口 > 分享设置 [获取签到配置](https://hbiclihthh.apifox.cn/api-194470886.md): 
+- 【新】后台接口 > 分享设置 [设置签到配置](https://hbiclihthh.apifox.cn/api-194471737.md): 
+- 【新】后台接口 > 分享设置 [获取工作分享配置](https://hbiclihthh.apifox.cn/api-194471903.md): 
+- 【新】后台接口 > 分享设置 [设置工作分享](https://hbiclihthh.apifox.cn/api-194472589.md): 
+- 【新】后台接口 > 分享设置 [获取机器人配置](https://hbiclihthh.apifox.cn/api-194472818.md): 
+- 【新】后台接口 > 分享设置 [设置机器人分享](https://hbiclihthh.apifox.cn/api-194473465.md): 
+- 【新】后台接口 > 分享设置 [获取广场设置](https://hbiclihthh.apifox.cn/api-199111209.md): 
+- 【新】后台接口 > 分享设置 [设置广场设置](https://hbiclihthh.apifox.cn/api-199111753.md): 
+- 【新】后台接口 > 空间设置 [空间设置详情](https://hbiclihthh.apifox.cn/api-196952858.md): 
+- 【新】后台接口 > 空间设置 [空间设置保存](https://hbiclihthh.apifox.cn/api-196953780.md): 
+- 【新】后台接口 > 任务分享记录 [签到记录](https://hbiclihthh.apifox.cn/api-198014098.md): 
+- 【新】后台接口 > 任务分享记录 [分享记录](https://hbiclihthh.apifox.cn/api-198032611.md): 
+- 【新】后台接口 > 任务分享记录 [邀请日志](https://hbiclihthh.apifox.cn/api-198033555.md): 
+- 【新】后台接口 > 任务分享记录 [机器人分享记录](https://hbiclihthh.apifox.cn/api-197634769.md): 
+- 【新】后台接口 > 任务分享记录 [作品分享记录](https://hbiclihthh.apifox.cn/api-198044042.md): 
+- 【新】后台接口 > AI绘画 > 绘画记录 [绘画记录](https://hbiclihthh.apifox.cn/api-200575755.md): 
+- 【新】后台接口 > AI绘画 > 应用配置 [配置详情](https://hbiclihthh.apifox.cn/api-200449613.md): 
+- 【新】后台接口 > AI绘画 > 应用配置 [配置保存](https://hbiclihthh.apifox.cn/api-200460076.md): 
+- 【新】后台接口 > AI绘画 > 描述词库 [描述词列表](https://hbiclihthh.apifox.cn/api-200479389.md): 
+- 【新】后台接口 > AI绘画 > 描述词库 [描述词添加](https://hbiclihthh.apifox.cn/api-200484514.md): 
+- 【新】后台接口 > AI绘画 > 描述词分类 [分类列表](https://hbiclihthh.apifox.cn/api-200493217.md): 
+- 【新】后台接口 > AI绘画 > 描述词分类 [分类新增](https://hbiclihthh.apifox.cn/api-200494721.md): 
+- 【新】后台接口 > AI绘画 > 描述词分类 [全部分类](https://hbiclihthh.apifox.cn/api-200498215.md): 
+- 【新】后台接口 > AI绘画 > 绘画示例 [示例列表](https://hbiclihthh.apifox.cn/api-200500060.md): 
+- 【新】后台接口 > AI绘画 > 绘画示例 [示例新增](https://hbiclihthh.apifox.cn/api-200502840.md): 
+- 【新】后台接口 > 广场分类 [分类列表](https://hbiclihthh.apifox.cn/api-201854873.md): 
+- 【新】后台接口 > 广场分类 [添加分类](https://hbiclihthh.apifox.cn/api-201855086.md): 
+- 【新】后台接口 > 广场分类 [编辑分类](https://hbiclihthh.apifox.cn/api-201856536.md): 
+- 【新】后台接口 > 广场分类 [修改状态](https://hbiclihthh.apifox.cn/api-201857039.md): 
+- 【新】后台接口 > 广场分类 [删除分类](https://hbiclihthh.apifox.cn/api-201857660.md): 
+- 【新】后台接口 > 广场分类 [分类列表（没分页）](https://hbiclihthh.apifox.cn/api-201878064.md): 
+- 【新】前台接口 > 公共接口 [全局配置](https://hbiclihthh.apifox.cn/api-136552594.md): 当前用户的所有知识库
+- 【新】前台接口 > 公共接口 [计费模型](https://hbiclihthh.apifox.cn/api-136562661.md): 当前用户的所有知识库
+- 【新】前台接口 > 公共接口 [装修数据](https://hbiclihthh.apifox.cn/api-137342852.md): 当前用户的所有知识库
+- 【新】前台接口 > 公共接口 [政策协议](https://hbiclihthh.apifox.cn/api-137343700.md): 
+- 【新】前台接口 > 公共接口 [增加访问](https://hbiclihthh.apifox.cn/api-137343949.md): 
+- 【新】前台接口 > 公共接口 [发送邮件](https://hbiclihthh.apifox.cn/api-148012830.md): 当前用户的所有知识库
+- 【新】前台接口 > 应用管理 > 机器人 [机器人列表](https://hbiclihthh.apifox.cn/api-135915787.md): 
+- 【新】前台接口 > 应用管理 > 机器人 [机器人详情](https://hbiclihthh.apifox.cn/api-135945701.md): 
+- 【新】前台接口 > 应用管理 > 机器人 [机器人新增](https://hbiclihthh.apifox.cn/api-135916137.md): 
+- 【新】前台接口 > 应用管理 > 机器人 [机器人编辑](https://hbiclihthh.apifox.cn/api-135943981.md): 
+- 【新】前台接口 > 应用管理 > 机器人 [机器人删除](https://hbiclihthh.apifox.cn/api-135958756.md): 
+- 【新】前台接口 > 应用管理 > 机器人 [机器人分类列表](https://hbiclihthh.apifox.cn/api-197621867.md): 
+- 【新】前台接口 > 应用管理 > 机器人 [机器人分享](https://hbiclihthh.apifox.cn/api-197623419.md): 
+- 【新】前台接口 > 应用管理 > 机器人 [机器人取消分享](https://hbiclihthh.apifox.cn/api-198224348.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [所有知识库](https://hbiclihthh.apifox.cn/api-135973400.md): 当前用户的所有知识库
+- 【新】前台接口 > 应用管理 > 知识库 [知识库列表](https://hbiclihthh.apifox.cn/api-135916264.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [知识库详情](https://hbiclihthh.apifox.cn/api-135923584.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [知识库新增](https://hbiclihthh.apifox.cn/api-135916455.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [知识库编辑](https://hbiclihthh.apifox.cn/api-135921922.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [知识库删除](https://hbiclihthh.apifox.cn/api-135922926.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [知识库转移](https://hbiclihthh.apifox.cn/api-167529517.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [存储空间(暂时用不上)](https://hbiclihthh.apifox.cn/api-197320846.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [文件列表](https://hbiclihthh.apifox.cn/api-135976030.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [文件删除](https://hbiclihthh.apifox.cn/api-135982353.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [文件重命名](https://hbiclihthh.apifox.cn/api-135981327.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [(废弃)共享用户筛选](https://hbiclihthh.apifox.cn/api-167242277.md): 用户添加共享用户的时候  根据名称或编号 筛选出用户的
+- 【新】前台接口 > 应用管理 > 知识库 [(废弃)共享用户列表](https://hbiclihthh.apifox.cn/api-167219325.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [(废弃)共享用户添加](https://hbiclihthh.apifox.cn/api-167212299.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [(废弃)共享用户删除](https://hbiclihthh.apifox.cn/api-167235844.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [团队用户筛选 ](https://hbiclihthh.apifox.cn/api-208423525.md): 用户添加共享用户的时候  根据名称或编号 筛选出用户的
+- 【新】前台接口 > 应用管理 > 知识库 [团队成员列表](https://hbiclihthh.apifox.cn/api-205162139.md): 用户添加共享用户的时候  根据名称或编号 筛选出用户的
+- 【新】前台接口 > 应用管理 > 知识库 [团队成员添加](https://hbiclihthh.apifox.cn/api-205223918.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [团队成员编辑](https://hbiclihthh.apifox.cn/api-206899618.md): 
+- 【新】前台接口 > 应用管理 > 知识库 [团队成员删除](https://hbiclihthh.apifox.cn/api-206903657.md): 
+- 【新】前台接口 > 应用管理 > 训练库 [训练数据列表](https://hbiclihthh.apifox.cn/api-135999240.md): 当前用户的所有知识库
+- 【新】前台接口 > 应用管理 > 训练库 [训练数据详情](https://hbiclihthh.apifox.cn/api-137351390.md): 当前用户的所有知识库
+- 【新】前台接口 > 应用管理 > 训练库 [训练数据修正](https://hbiclihthh.apifox.cn/api-137379820.md): 
+- 【新】前台接口 > 应用管理 > 训练库 [训练数据删除](https://hbiclihthh.apifox.cn/api-137407936.md): 
+- 【新】前台接口 > 应用管理 > 训练库 [训练数据重试](https://hbiclihthh.apifox.cn/api-137410594.md): 
+- 【新】前台接口 > 应用管理 > 训练库 [训练数据导入](https://hbiclihthh.apifox.cn/api-136340117.md): 当前用户的所有知识库
+- 【新】前台接口 > 应用管理 > 训练库 [训练数据录入](https://hbiclihthh.apifox.cn/api-137445167.md): 
+- 【新】前台接口 > 应用管理 > 训练库 [训练状态检测](https://hbiclihthh.apifox.cn/api-141434996.md): 轮询进行检查
+- 【新】前台接口 > 应用管理 > 训练库 [搜索测试](https://hbiclihthh.apifox.cn/api-138201580.md): 
+- 【新】前台接口 > 应用管理 > 训练库 [费用预估](https://hbiclihthh.apifox.cn/api-143099930.md): 
+- 【新】前台接口 > 应用管理 > 训练库 [QA重试](https://hbiclihthh.apifox.cn/api-143308439.md): 
+- 【新】前台接口 > 应用管理 > 训练库 [QA检测](https://hbiclihthh.apifox.cn/api-143320813.md): 
+- 【新】前台接口 > 应用管理 > 训练库 [网页抓取](https://hbiclihthh.apifox.cn/api-168968081.md): 
+- 【新】前台接口 > 应用管理 > 对话数据 [对话数据信息](https://hbiclihthh.apifox.cn/api-138457568.md): 
+- 【新】前台接口 > 应用管理 > 对话数据 [对话记录列表](https://hbiclihthh.apifox.cn/api-138465710.md): 
+- 【新】前台接口 > 应用管理 > 对话数据 [对话记录删除](https://hbiclihthh.apifox.cn/api-138477744.md): 
+- 【新】前台接口 > 应用管理 > 对话数据 [对话记录修正](https://hbiclihthh.apifox.cn/api-142462906.md): 
+- 【新】前台接口 > 应用管理 > 对话数据 [对话记录反馈](https://hbiclihthh.apifox.cn/api-184693146.md): 
+- 【新】前台接口 > 应用管理 > 发布分享 [发布列表](https://hbiclihthh.apifox.cn/api-138046435.md): 
+- 【新】前台接口 > 应用管理 > 发布分享 [发布详情](https://hbiclihthh.apifox.cn/api-138152312.md): 
+- 【新】前台接口 > 应用管理 > 发布分享 [发布创建](https://hbiclihthh.apifox.cn/api-137994819.md): 
+- 【新】前台接口 > 应用管理 > 发布分享 [发布编辑](https://hbiclihthh.apifox.cn/api-139032905.md): 
+- 【新】前台接口 > 应用管理 > 发布分享 [发布删除](https://hbiclihthh.apifox.cn/api-138058032.md): 
+- 【新】前台接口 > 应用管理 > 发布分享 [设置分享背景](https://hbiclihthh.apifox.cn/api-172717606.md): 
+- 【新】前台接口 > 应用管理 > 发布分享 [编辑信息](https://hbiclihthh.apifox.cn/api-200722844.md): 
+- 【新】前台接口 > 应用管理 > 机器人对话 [普通对话](https://hbiclihthh.apifox.cn/api-137717236.md): 
+- 【新】前台接口 > 应用管理 > 机器人对话 [分享对话](https://hbiclihthh.apifox.cn/api-138160986.md): 
+- 【新】前台接口 > 应用管理 > 机器人对话 [对话记录删除](https://hbiclihthh.apifox.cn/api-138178552.md): 
+- 【新】前台接口 > 应用管理 > 机器人对话 [对话记录列表](https://hbiclihthh.apifox.cn/api-137962236.md): 
+- 【新】前台接口 > 应用管理 > 机器人对话 [对话分类列表](https://hbiclihthh.apifox.cn/api-139819563.md): 
+- 【新】前台接口 > 应用管理 > 机器人对话 [对话分类创建](https://hbiclihthh.apifox.cn/api-139834637.md): 
+- 【新】前台接口 > 应用管理 > 机器人对话 [对话分类编辑](https://hbiclihthh.apifox.cn/api-139835940.md): 
+- 【新】前台接口 > 应用管理 > 机器人对话 [对话分类删除](https://hbiclihthh.apifox.cn/api-139836865.md): 
+- 【新】前台接口 > 应用管理 > 机器人对话 [对话分类清空](https://hbiclihthh.apifox.cn/api-139839876.md): 
+- 【新】前台接口 > 应用管理 > 机器人广场 [机器人分类](https://hbiclihthh.apifox.cn/api-159629990.md): 该接口返回所有分类数据 不存在分页
+- 【新】前台接口 > 应用管理 > 机器人广场 [机器人广场](https://hbiclihthh.apifox.cn/api-159616064.md): 只显示用户公开的 并且 未被禁用的机器人
+- 【新】前台接口 > 应用管理 > 机器人广场 [使用的记录](https://hbiclihthh.apifox.cn/api-164255554.md): 
+- 【新】前台接口 > 应用管理 > 机器人广场 [使用机器人](https://hbiclihthh.apifox.cn/api-164254958.md): 
+- 【新】前台接口 > 应用管理 > 机器人广场 [删除使用记录](https://hbiclihthh.apifox.cn/api-164258808.md): 
+- 【新】前台接口 > 对话管理 > AI创作 [模型分类](https://hbiclihthh.apifox.cn/api-136744463.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI创作 [创作模型列表](https://hbiclihthh.apifox.cn/api-136744814.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI创作 [创作模型详情](https://hbiclihthh.apifox.cn/api-136745785.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI创作 [创作模型保存](https://hbiclihthh.apifox.cn/api-136746670.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI创作 [创作模型记录更新](https://hbiclihthh.apifox.cn/api-186119126.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI创作 [创作记录删除](https://hbiclihthh.apifox.cn/api-204269652.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI对话 [会话分类列表](https://hbiclihthh.apifox.cn/api-136753055.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI对话 [会话分类新增](https://hbiclihthh.apifox.cn/api-136756872.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI对话 [会话分类编辑](https://hbiclihthh.apifox.cn/api-136757538.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI对话 [会话分类删除](https://hbiclihthh.apifox.cn/api-136758098.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI对话 [会话分类清空](https://hbiclihthh.apifox.cn/api-136758426.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI对话 [对话记录列表](https://hbiclihthh.apifox.cn/api-136760652.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI对话 [对话记录删除](https://hbiclihthh.apifox.cn/api-136761664.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI对话 [对话收藏列表](https://hbiclihthh.apifox.cn/api-136764155.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI对话 [对话收藏加入](https://hbiclihthh.apifox.cn/api-136764869.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI对话 [对话收藏取消](https://hbiclihthh.apifox.cn/api-136765604.md): 当前用户的所有知识库
+- 【新】前台接口 > 对话管理 > AI对话 [发起对话](https://hbiclihthh.apifox.cn/api-135914289.md): 
+- 【新】前台接口 > 对话管理 > AI角色 [角色列表](https://hbiclihthh.apifox.cn/api-171801865.md): 
+- 【新】前台接口 > 对话管理 > AI角色 [角色详情](https://hbiclihthh.apifox.cn/api-171802030.md): 
+- 【新】前台接口 > 对话管理 [问题示例列表](https://hbiclihthh.apifox.cn/api-139704232.md): 当前用户的所有知识库
+- 【新】前台接口 > 用户管理 [用户中心](https://hbiclihthh.apifox.cn/api-137330299.md): 当前用户的所有知识库
+- 【新】前台接口 > 用户管理 [用户信息](https://hbiclihthh.apifox.cn/api-137334163.md): 当前用户的所有知识库
+- 【新】前台接口 > 用户管理 [编辑信息](https://hbiclihthh.apifox.cn/api-141098167.md): 
+- 【新】前台接口 > 用户管理 [账户注销](https://hbiclihthh.apifox.cn/api-148091710.md): 
+- 【新】前台接口 > 账号登录 [登录账号](https://hbiclihthh.apifox.cn/api-137344444.md): 
+- 【新】前台接口 > 账号登录 [登录账号 Copy](https://hbiclihthh.apifox.cn/api-157886586.md): 
+- 【新】前台接口 > 充值套餐 [套餐列表](https://hbiclihthh.apifox.cn/api-138317400.md): 
+- 【新】前台接口 > 充值套餐 [充值下单](https://hbiclihthh.apifox.cn/api-138317401.md): 
+- 【新】前台接口 > 充值套餐 [发起支付](https://hbiclihthh.apifox.cn/api-138317402.md): 
+- 【新】前台接口 > 充值套餐 [回调测试](https://hbiclihthh.apifox.cn/api-138317403.md): 
+- 【新】前台接口 > 充值套餐 [支付方式](https://hbiclihthh.apifox.cn/api-138317404.md): 
+- 【新】前台接口 > 充值套餐 [购买记录](https://hbiclihthh.apifox.cn/api-138317405.md): 
+- 【新】前台接口 > 充值套餐 [支付状态](https://hbiclihthh.apifox.cn/api-138317406.md): 
+- 【新】前台接口 > 账户明细 [余额明细列表](https://hbiclihthh.apifox.cn/api-138599921.md): 
+- 【新】前台接口 > 账户明细 [余额明细详情](https://hbiclihthh.apifox.cn/api-138703447.md): 
+- 【新】前台接口 > 上传接口 [上传图片](https://hbiclihthh.apifox.cn/api-139166050.md): 
+- 【新】前台接口 > 上传接口 [上传文件](https://hbiclihthh.apifox.cn/api-139167660.md): 
+- 【新】前台接口 > 上传接口 [上传音频](https://hbiclihthh.apifox.cn/api-139175435.md): 
+- 【新】前台接口 > 上传接口 [上传视频](https://hbiclihthh.apifox.cn/api-161064521.md): 
+- 【新】前台接口 > 语音播报 [生成语音播报](https://hbiclihthh.apifox.cn/api-139348425.md): 
+- 【新】前台接口 > 语音转换 [语音合成](https://hbiclihthh.apifox.cn/api-156510410.md): 文字转语音的接口, 用于把对话记录生成语音文件
+- 【新】前台接口 > 语音转换 [语音识别](https://hbiclihthh.apifox.cn/api-156582343.md): 语音 转 文字 的接口
+- 【新】前台接口 > 会员套餐 [会员套餐列表](https://hbiclihthh.apifox.cn/api-178417965.md): 
+- 【新】前台接口 > 会员套餐 [会员套餐购买](https://hbiclihthh.apifox.cn/api-178418959.md): 
+- 【新】前台接口 > 通知管理 [通知列表](https://hbiclihthh.apifox.cn/api-192106121.md): 
+- 【新】前台接口 > 通知管理 [标记已读](https://hbiclihthh.apifox.cn/api-192128872.md): 
+- 【新】前台接口 > 通知管理 [全部已读](https://hbiclihthh.apifox.cn/api-192131678.md): 
+- 【新】前台接口 > 通知管理 [清空所有已读](https://hbiclihthh.apifox.cn/api-192133814.md): 
+- 【新】前台接口 > 分享奖励 [获取任务奖励(返回装修数据)](https://hbiclihthh.apifox.cn/api-196251516.md): 
+- 【新】前台接口 > 分享奖励 [获取分享链接id](https://hbiclihthh.apifox.cn/api-196472319.md): 
+- 【新】前台接口 > 分享奖励 [分享链接点击](https://hbiclihthh.apifox.cn/api-196473046.md): 
+- 【新】前台接口 > 分享奖励 [邀请链接点击](https://hbiclihthh.apifox.cn/api-196474184.md): 
+- 【新】前台接口 > 分享奖励 [签到接口](https://hbiclihthh.apifox.cn/api-196252272.md): 
+- 【新】前台接口 > 分享奖励 [获取绘画分类列表](https://hbiclihthh.apifox.cn/api-196252386.md): 
+- 【新】前台接口 > 分享奖励 [分享到绘画广场](https://hbiclihthh.apifox.cn/api-196252395.md): 
+- 【新】前台接口 > 分享奖励 [绘画广场列表](https://hbiclihthh.apifox.cn/api-196956393.md): 
+- 【新】前台接口 > 分享奖励 [绘画收藏、取消收藏](https://hbiclihthh.apifox.cn/api-196935303.md): 
+- 【新】前台接口 > 分享奖励 [音乐风格](https://hbiclihthh.apifox.cn/api-196491419.md): 
+- 【新】前台接口 > 分享奖励 [分享到音乐广场](https://hbiclihthh.apifox.cn/api-196584038.md): 
+- 【新】前台接口 > 分享奖励 [音乐广场列表](https://hbiclihthh.apifox.cn/api-196992703.md): 
+- 【新】前台接口 > 分享奖励 [音乐收藏、取消收藏](https://hbiclihthh.apifox.cn/api-196939577.md): 
+- 【新】前台接口 > 分享奖励 [视频风格](https://hbiclihthh.apifox.cn/api-196598799.md): 
+- 【新】前台接口 > 分享奖励 [分享到视频广场](https://hbiclihthh.apifox.cn/api-196605187.md): 
+- 【新】前台接口 > 分享奖励 [视频广场列表](https://hbiclihthh.apifox.cn/api-196994729.md): 
+- 【新】前台接口 > 分享奖励 [视频收藏、取消收藏](https://hbiclihthh.apifox.cn/api-196939969.md): 
+- 【新】前台接口 > 广场分类 [广场列表](https://hbiclihthh.apifox.cn/api-201891348.md): 
+- 【新】前台接口 > 数字人 [配音角色](https://hbiclihthh.apifox.cn/api-159145714.md): 
+- 【新】前台接口 > 数字人 [数字人列表](https://hbiclihthh.apifox.cn/api-158988854.md): 
+- 【新】前台接口 > 数字人 [数字人详情](https://hbiclihthh.apifox.cn/api-158990884.md): 
+- 【新】前台接口 > 数字人 [数字人新增](https://hbiclihthh.apifox.cn/api-158991154.md): 
+- 【新】前台接口 > 数字人 [数字人编辑](https://hbiclihthh.apifox.cn/api-159166166.md): 
+- 【新】前台接口 > 数字人 [数字人删除](https://hbiclihthh.apifox.cn/api-159166610.md): 
+- 【新】前台接口 > AI音乐 [音乐生成](https://hbiclihthh.apifox.cn/api-179088264.md): 
+- 【新】前台接口 > AI音乐 [音乐风格](https://hbiclihthh.apifox.cn/api-179135950.md): 
+- 【新】前台接口 > AI音乐 [歌词联想](https://hbiclihthh.apifox.cn/api-179154712.md): 
+- 【新】前台接口 > AI音乐 [音乐列表](https://hbiclihthh.apifox.cn/api-179246346.md): 
+- 【新】前台接口 > AI音乐 [音乐详情](https://hbiclihthh.apifox.cn/api-179270521.md): 
+- 【新】前台接口 > AI音乐 [音乐配置](https://hbiclihthh.apifox.cn/api-179510898.md): 
+- 【新】前台接口 > AI音乐 [音乐删除](https://hbiclihthh.apifox.cn/api-180006950.md): 
+- 【新】前台接口 > AI音乐 [音乐推荐列表](https://hbiclihthh.apifox.cn/api-203867718.md): 
+- 【新】前台接口 > AI视频 [视频配置](https://hbiclihthh.apifox.cn/api-189268224.md): 
+- 【新】前台接口 > AI视频 [生成视频](https://hbiclihthh.apifox.cn/api-189406168.md): 
+- 【新】前台接口 > AI视频 [视频列表](https://hbiclihthh.apifox.cn/api-189426850.md): 
+- 【新】前台接口 > AI视频 [视频删除](https://hbiclihthh.apifox.cn/api-189429251.md): 
+- 【新】前台接口 > AI视频 [视频详情](https://hbiclihthh.apifox.cn/api-189431514.md): 
+- 【新】前台接口 > AI视频 [翻译prompt](https://hbiclihthh.apifox.cn/api-193330342.md): 
+- 【新】前台接口 > AI搜索 [发起搜索](https://hbiclihthh.apifox.cn/api-199466430.md): outline=大纲卡片
+- 【新】前台接口 > AI搜索 [搜索示例](https://hbiclihthh.apifox.cn/api-200507404.md): 
+- 【新】前台接口 > AI搜索 [搜索配置](https://hbiclihthh.apifox.cn/api-207538358.md): 
+- 【新】前台接口 > AI搜索 [搜索记录列表](https://hbiclihthh.apifox.cn/api-219570490.md): 
+- 【新】前台接口 > AI搜索 [搜索记录详情](https://hbiclihthh.apifox.cn/api-219573015.md): 
+- 【新】前台接口 > AI绘画 [绘画详情](https://hbiclihthh.apifox.cn/api-197834126.md): 
+- 【新】前台接口 > AI绘画 [dalle绘画](https://hbiclihthh.apifox.cn/api-200952088.md): 
+- 【新】前台接口 > AI绘画 [绘画列表](https://hbiclihthh.apifox.cn/api-201129189.md): 
+- 【新】前台接口 > AI绘画 [绘画配置](https://hbiclihthh.apifox.cn/api-201238910.md): 
+- 【新】前台接口 > AI绘画 [mj绘画](https://hbiclihthh.apifox.cn/api-204668223.md): 
+- 【新】前台接口 > AI绘画 [豆包绘画](https://hbiclihthh.apifox.cn/api-232675398.md): 
+- 【新】前台接口 > AIPPT [获取模版封面](https://hbiclihthh.apifox.cn/api-220695553.md): 
+- 【新】前台接口 > AIPPT [获取大纲及标题](https://hbiclihthh.apifox.cn/api-220713921.md): 
+- 【新】前台接口 > AIPPT [提交任务](https://hbiclihthh.apifox.cn/api-221001747.md): 
+- 【新】前台接口 > AIPPT [记录列表](https://hbiclihthh.apifox.cn/api-221336461.md): 
+- 【新】前台接口 > AIPPT [记录详情](https://hbiclihthh.apifox.cn/api-221348074.md): 
+- 【新】前台接口 > AIPPT [ppt配置](https://hbiclihthh.apifox.cn/api-221369092.md): 
+- 【新】前台接口 > AIPPT [下载地址](https://hbiclihthh.apifox.cn/api-231122729.md): 
